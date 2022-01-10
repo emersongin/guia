@@ -1,29 +1,34 @@
 
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
+import axios from 'axios';
 
-const axios = require('axios').default;
 const api = axios.create({
-    baseUrl: 'http://localhost:3000',
+    baseURL: 'http://10.0.0.109:8000/api',
+    headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+    },
 });
 
 const App = () => {
     const [events, setEvents] = useState([{title: 'null'}]);
 
-    useEffect(() => {
+    const getEvents = async () => {
         try {
-            api.get('api/events')
-                .then(({data}) => {
-                    setEvents(data);
-                    // console.warn(data);
-            })
-                .catch(function (error) {
-                    console.warn(error);
-            });
+            console.warn('iniciou!');
+            const { data } = await api.get('events');
+                    // setEvents(data);
+            console.warn(data);
+
         } catch (error) {
-            console.warn(error);
+            console.warn(error.message);
 
         }
+    };
+
+    useEffect(() => {
+        getEvents();
     }, []);
 
     return (
