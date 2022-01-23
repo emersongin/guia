@@ -5,14 +5,23 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-    safeView: {
-        width: windowWidth / 100 * 90,
-    },
-    background: {
+    container: {
+        flex: 1,
         backgroundColor: Colors.background,
         width: windowWidth,
         height: windowHeight,
         alignItems: 'center',
+    },
+    safeView: {
+        flex: 1,
+        width: windowWidth / 100 * 90,
+        paddingTop: 20,
+        paddingBottom: 20,
+    },
+    viewContentCenter: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'space-around',
     },
     frame: {
         width: 192,
@@ -20,14 +29,24 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.grey,
         borderRadius: 100,
     },
-    input: {
-
+    text: {
+        height: 40,
+        marginBottom: 40,
+        color: Colors.light,
+        textAlign: 'center',
+        textAlignVertical: 'center',
     },
-    lightText: {
+    textButton: {
+        color: Colors.light,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+    },
+    input: {
+        height: 40,
         backgroundColor: Colors.light,
-        width: windowWidth,
-        height: windowHeight,
-        borderRadius: 2,
+        color: Colors.dark,
+        padding: 10,
+        marginBottom: 10,
     },
     actionButton: {
         minHeight: 100,
@@ -35,7 +54,12 @@ const styles = StyleSheet.create({
         padding: 100,
     },
     createAccontButton: {
-
+        alignItems: 'center',
+        backgroundColor: Colors.background,
+        borderWidth: 1,
+        borderColor: Colors.light,
+        borderRadius: 2,
+        padding: 10,
     },
 });
 

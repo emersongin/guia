@@ -10,6 +10,7 @@ const Colors = {
     quaternary: '#7A3700',
     background: '#2F1500',
     light:      '#FFF',
+    dark:       '#000',
     grey:       '#999',
 };
 
