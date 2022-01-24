@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     text: {
         height: 40,
-        marginBottom: 40,
+        marginBottom: 100,
         color: Colors.light,
         textAlign: 'center',
         textAlignVertical: 'center',
@@ -49,9 +49,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     actionButton: {
-        minHeight: 100,
-        maxHeight: 100,
-        padding: 100,
+        padding: 10,
     },
     createAccontButton: {
         alignItems: 'center',
