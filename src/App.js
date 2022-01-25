@@ -19,7 +19,6 @@ const App = () => {
             setTest(data);
 
         } catch (error) {
-            console.warn(error);
             console.warn({...error});
 
         }
@@ -31,7 +30,7 @@ const App = () => {
 
     return (
         <View>
-            <Text>{test.msg}</Text>
+            <Text>{test.msg.event_date}</Text>
         </View>
     );
 };
